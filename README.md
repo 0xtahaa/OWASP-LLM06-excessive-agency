@@ -2,7 +2,13 @@
 
 # LLM06 — Excessive Agency
 
-Part of the **Autorea Security Lab**: a series of 20 mini-projects covering the OWASP Top 10 for LLMs and the OWASP Top 10 for Agentic Applications, each as a runnable vulnerable/fixed demo.
+## What is Excessive Agency?
+
+**Excessive Agency** means an AI agent has more capabilities, permissions, or autonomy than its actual task requires — a generic, all-powerful tool where a narrow one would do, or full database access where read-only would be enough. It's rarely intentional; it's usually convenience ("one flexible tool is simpler to build than five narrow ones").
+
+The risk stays invisible until something else goes wrong — most commonly, the agent gets manipulated through a hidden instruction (prompt injection). Excessive Agency doesn't cause that manipulation. It decides **how much damage the manipulation can do once it succeeds.** Think of it as the difference between handing someone a key to one room versus a master key to the whole building: if that key is ever misused, the first can only open one door — the second opens everything.
+
+## The Demo
 
 An AI customer-service agent is given a tool with far more access than its task requires. A hidden instruction inside a normal-looking support message manipulates it into reading and overwriting a different customer's data. Two versions of the same agent, same model, same attack — only the tool architecture differs.
 
